@@ -6,12 +6,12 @@ import { ExperienceSection } from "../components/ExperienceSection";
 import { AboutSection } from "../components/AboutSection";
 import { SkillSection } from "../components/SkillSection";
 import { ProjectsSection } from "../components/ProjectsSection";
+import { ContactSection } from "../components/ContactSection";
+import { Footer } from "../components/Footer";
 
 export const Home = () => {
     return (
         <div className="min-ht-screen bg-background text-foreground overflow-x-hidden">
-            {/* theme-toggle */}
-            <ThemeToggle />
             {/* background-effect */}
             <StarBackground />
             {/* navbar */}
@@ -23,9 +23,10 @@ export const Home = () => {
                 <ExperienceSection />
                 <SkillSection />
                 <ProjectsSection />
+                <ContactSection />
             </main>
-
             {/* footer */}
+                <Footer />
         </div>
     );
 };
