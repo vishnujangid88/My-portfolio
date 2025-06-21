@@ -23,13 +23,14 @@ export const Navbar = () => {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+
+      // Toggle background blur based on scroll position
       setIsScrolled(currentScrollY > 10);
 
-      if (currentScrollY > lastScrollY) {
-        // Scrolling down
+      // Hide nav on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setShowNavbar(false);
       } else {
-        // Scrolling up
         setShowNavbar(true);
       }
 
@@ -41,73 +42,92 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-xs" : "",
-        showNavbar ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-      )}
-    >
-      <div className="container flex items-center justify-between py-4 md:py-5">
-        {/* Logo */}
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#home"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground"> Vishnu's </span>{" "}
-            Portfolio
-          </span>
-        </a>
+    <>
+      {/* Navbar */}
+      <nav
+        className={cn(
+          "fixed top-0 w-full z-50 px-4 md:px-8 transition-all duration-300",
+          showNavbar ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0",
+          isScrolled
+            ? "bg-background/80 backdrop-blur-md shadow-md"
+            : "bg-transparent"
+        )}
+      >
+        <div className="flex items-center justify-between py-4 text-foreground">
+          {/* Logo */}
+          <a
+            href="#home"
+            className="text-xl font-bold text-primary flex items-center"
+          >
+            <span className="text-glow">Vishnu's Portfolio</span>
+          </a>
 
-        {/* Desktop Nav + Theme Toggle */}
-        <div className="hidden md:flex items-center space-x-6">
-          {navItems.map((item, key) => (
-            <a
-              key={key}
-              href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
-            >
-              {item.name}
-            </a>
-          ))}
-          <ThemeToggle />
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
-        {/* Mobile Nav */}
-        <div
-          className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
-            isMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          )}
-        >
-          <div className="flex flex-col space-y-8 text-xl items-center">
-            {navItems.map((item, key) => (
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center space-x-6">
+            {navItems.map((item) => (
               <a
-                key={key}
+                key={item.href}
                 href={item.href}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
             <ThemeToggle />
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="md:hidden p-2 text-foreground"
+            aria-label="Open Menu"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={cn(
+          "fixed top-0 right-0 h-full w-4/5 max-w-xs z-50 bg-background text-foreground shadow-lg transition-transform duration-300 ease-in-out md:hidden",
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
+        <div className="flex flex-col h-full overflow-y-auto py-10 px-6 space-y-8 relative items-start text-left">
+
+          {/* Close button */}
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="absolute top-4 right-4 text-foreground"
+          >
+            <X size={24} />
+          </button>
+
+          {/* Nav items */}
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="text-lg hover:text-primary transition-colors duration-200"
+            >
+              {item.name}
+            </a>
+          ))}
+
+          {/* Theme toggle */}
+          <ThemeToggle />
         </div>
       </div>
-    </nav>
+
+      {/* Backdrop */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+    </>
   );
 };
