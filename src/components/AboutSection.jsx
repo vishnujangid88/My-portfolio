@@ -1,90 +1,58 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { GraduationCap, School } from "lucide-react";
 
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
-      {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary"> Me</span>
+          About <span className="text-primary">Me</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* Left Column – Educational Background */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
-            </h3>
-
-            <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
-            </p>
-
-            <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
-            </p>
-
-            <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                    <a href="https://drive.google.com/file/d/1vUrWWPEtNVIs3xyGPaDqjIEzIwdOSN5u/view?usp=sharing" className="cosmic-button" target="_blank" rel="noopener noreferrer">
-                        Download Resume/CV
-                    </a>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
-
-                <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                    <a href="https://www.linkedin.com/in/vishnujangid88/" className="cosmic-button" target="_blank" rel="noopener noreferrer">
-                        View LinkedIn
-                    </a>
+                <div>
+                  <h4 className="font-semibold text-lg">College</h4>
+                  <p className="text-muted-foreground">
+                    B.Tech in Mechanical Engineering, Government Engineering College Bikaner (GECB), Rajasthan <br />
+                    Batch: 2022 - 2026
+                  </p>
                 </div>
+              </div>
+            </div>
+
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <School className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg">School</h4>
+                  <p className="text-muted-foreground">
+                    Completed Senior Secondary from Maheshwari Public School, Jaipur <br />
+                    Year: 2021
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
-                  <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
-                  <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
-
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
-                  <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Right Column – Bio */}
+          <div className="space-y-8">
+            <h3 className="text-2xl font-semibold space-y-2">
+              Passionate Web Developer & Tech Creator
+            </h3>
+            <p className="text-muted-foreground">
+              I'm a driven web developer with a strong interest in building engaging digital experiences. I love coding, solving real-world problems, and exploring new technologies.
+            </p>
+            <p className="text-muted-foreground">
+              Currently pursuing a B.Tech in Mechanical Engineering, I actively apply my analytical skills to software development. I aim to bridge the gap between engineering and technology through continuous learning and innovation.
+            </p>
           </div>
         </div>
       </div>

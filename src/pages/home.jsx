@@ -1,4 +1,3 @@
-import { ThemeToggle } from "../components/themetoggle";
 import { StarBackground } from "../components/StarBackground";
 import { Navbar } from "../components/Navbar";
 import { HomeSection } from "../components/HomeSection";
@@ -8,6 +7,7 @@ import { SkillSection } from "../components/SkillSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import { CertificateSection } from "../components/CertificateSection";
 
 export const Home = () => {
     return (
@@ -23,6 +23,7 @@ export const Home = () => {
                 <ExperienceSection />
                 <SkillSection />
                 <ProjectsSection />
+                <CertificateSection />
                 <ContactSection />
             </main>
             {/* footer */}
