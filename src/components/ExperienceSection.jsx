@@ -29,14 +29,8 @@ export const ExperienceSection = () => {
             </p>
 
             <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                    <a href="https://drive.google.com/file/d/1vUrWWPEtNVIs3xyGPaDqjIEzIwdOSN5u/view?usp=sharing" className="cosmic-button" target="_blank" rel="noopener noreferrer">
-                        Download Resume/CV
-                    </a>
-                </div>
-
-                <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                    <a href="https://www.linkedin.com/in/vishnujangid88/" className="cosmic-button" target="_blank" rel="noopener noreferrer">
-                        View LinkedIn
+                    <a href="url not found" className="cosmic-button" target="_blank" rel="noopener noreferrer">
+                        View Project
                     </a>
                 </div>
           </div>

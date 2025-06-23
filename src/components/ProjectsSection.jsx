@@ -3,33 +3,30 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/image-1.jpg",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "VisionMATE",
+    description: "A comprehensive web application designed to assist visually impaired students with features like object detection, text-to-speech, speech-to-text, and task management using voice commands.",
+    image: "/projects/project-1.jpg",
+    tags: ["React", "TensorFlow", "Web Speech API", "Node.js", "MongoDB"],
+    githubUrl: "https://github.com/vishnujangid88/VisionMATE",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Auto-Forest",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/image-2.jpg",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "built a preprocessed grayscale leaf image dataset and trained a convolutional autoencoder for image reconstruction, enabling plant identification research.",
+    image: "/projects/project-2.jpg",
+    tags: ["Python", "TensorFlow", "Deep Learning", "Autoencoder", "Computer Vision", "Image Processing"],
+    githubUrl: "https://github.com/vishnujangid88/Auto-Forest",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/image-3.jpg",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Hand Gesture Dino Game",
+    description: "A Python project that lets you play the Chrome Dino game using real-time hand gesture recognition with OpenCV and PyAutoGUI.",
+    image: "/projects/project-3.jpg",
+    tags: ["Python", "OpenCV", "Computer Vision", "Gesture Recognition", "PyAutoGUI"],
+    githubUrl: "https://github.com/vishnujangid88/Hand-Gesture-Dino-Game"
   },
+
 ];
 
 export const ProjectsSection = () => {
@@ -75,13 +72,6 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
