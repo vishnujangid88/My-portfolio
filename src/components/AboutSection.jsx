@@ -44,15 +44,15 @@ export const AboutSection = () => {
           </div>
 
           {/* Right Column – Bio */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold space-y-2">
-              Passionate Web Developer & Tech Creator
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold space-y-2">
+              AI & Data Science Enthusiast | Innovator in Intelligent Technologies
             </h3>
             <p className="text-muted-foreground">
-              I'm a driven web developer with a strong interest in building engaging digital experiences. I love coding, solving real-world problems, and exploring new technologies.
+              With a strong foundation in programming, machine learning, and full-stack development, I specialize in building intelligent solutions using Python, C++, React, and leading AI frameworks. My hands-on experience extends to cloud computing with Microsoft Azure and Google Cloud Platform.
             </p>
             <p className="text-muted-foreground">
-              Currently pursuing a B.Tech in Mechanical Engineering, I actively apply my analytical skills to software development. I aim to bridge the gap between engineering and technology through continuous learning and innovation.
+              As a current member of Google Developers Group (GDG) in Intelligence Technologies at MBM University, I am passionate about applying AI to solve real-world challenges. I thrive in collaborative environments, continuously learning and leveraging emerging technologies through internships, hackathons, and impactful projects.
             </p>
           </div>
         </div>
