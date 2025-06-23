@@ -3,71 +3,114 @@ import { cn } from "@/lib/utils";
 
 const skills = [
     // Frontend
-    { name: "HTML/CSS", category: "frontend" },
+    { name: "HTML", category: "frontend" },
+    { name: "CSS", category: "frontend" },
     { name: "JavaScript", category: "frontend" },
-    { name: "React", category: "frontend" },
-    { name: "TypeScript", category: "frontend" },
+    { name: "React.js", category: "frontend" },
     { name: "Tailwind CSS", category: "frontend" },
-    { name: "Next.js", category: "frontend" },
 
     // Backend
+    { name: "Flask", category: "backend" },
     { name: "Node.js", category: "backend" },
-    { name: "Express", category: "backend" },
-    { name: "MongoDB", category: "backend" },
-    { name: "PostgreSQL", category: "backend" },
-    { name: "GraphQL", category: "backend" },
+
+    // Database
+    { name: "MySQL", category: "database" },
+    { name: "MongoDB", category: "database" },
+
+    // Programming Languages
+    { name: "Python", category: "language" },
+    { name: "C++", category: "language" },
+    { name: "C", category: "language" },
+
+    // Machine Learning / AI
+    { name: "TensorFlow", category: "ml" },
+    { name: "PyTorch", category: "ml" },
+    { name: "Keras", category: "ml" },
+    { name: "Scikit-Learn", category: "ml" },
+    { name: "OpenCV", category: "ml" },
+    { name: "Mediapipe", category: "ml" },
+    { name: "LangChain", category: "ml" },
+    { name: "LLMs", category: "ml" },
+    { name: "Pandas", category: "ml" },
+    { name: "NumPy", category: "ml" },
+    { name: "Matplotlib", category: "ml" },
+    { name: "Seaborn", category: "ml" },
+    { name: "PyAutoGUI", category: "ml" },
+    { name: "Streamlit", category: "ml" },
 
     // Tools
-    { name: "Git/GitHub", category: "tools" },
+    { name: "Git", category: "tools" },
+    { name: "GitHub", category: "tools" },
+    { name: "Git Bash", category: "tools" },
     { name: "Docker", category: "tools" },
     { name: "Figma", category: "tools" },
-    { name: "VS Code", category: "tools" },
+    { name: "Canva", category: "tools" },
+    { name: "Visual Studio Code", category: "tools" },
+    { name: "PyCharm", category: "tools" },
+    { name: "Microsoft Azure", category: "tools" },
+    { name: "Google Cloud Platform", category: "tools" },
+
+    // Software Development
+    { name: "DSA", category: "software" },
+    { name: "OOP", category: "software" },
+    { name: "Operating Systems", category: "software" },
+    { name: "Computer Networks", category: "software" },
+    { name: "Robotics & Embedded Systems", category: "software" },
+
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = [
+    { key: "all", label: "All" },
+    { key: "language", label: "Programming Languages" },
+    { key: "ml", label: "Machine Learning / AI" },
+    { key: "frontend", label: "Frontend" },
+    { key: "backend", label: "Backend" },
+    { key: "database", label: "Database" },
+    { key: "tools", label: "Tools" },
+    { key: "software", label: "Software Development" },
+];
 
 export const SkillSection = () => {
-    const [activeCategory, setActiveCategory] = useState("all");
+    const [activeTab, setActiveTab] = useState("all");
 
-    const filteredSkills = skills.filter(
-        (skill) => activeCategory === "all" || skill.category === activeCategory
-    );
+    const filteredSkills =
+        activeTab === "all"
+            ? skills
+            : skills.filter((skill) => skill.category === activeTab);
+
     return (
         <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-            <div className="container mx-auto max-w-5xl">
+            <div className="container mx-auto max-w-3xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                    My <span className="text-primary"> Skills</span>
+                    My <span className="text-primary">Skills</span>
                 </h2>
 
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
-                    {categories.map((category, key) => (
+                {/* Tabs */}
+                <div className="flex flex-wrap justify-center gap-2 mb-8">
+                    {categories.map((cat) => (
                         <button
-                            key={key}
-                            onClick={() => setActiveCategory(category)}
+                            key={cat.key}
+                            onClick={() => setActiveTab(cat.key)}
                             className={cn(
-                                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                                activeCategory === category
+                                "px-4 py-2 rounded-full transition-colors duration-300 capitalize text-l font-medium",
+                                activeTab === cat.key
                                     ? "bg-primary text-primary-foreground"
-                                    : "bg-secondary/70 text-forefround hover:bd-secondary"
+                                    : "bg-secondary/70 text-foreground hover:bg-secondary"
                             )}
                         >
-                            {category}
+                            {cat.label}
                         </button>
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filteredSkills.map((skill, key) => (
+                {/* Skills as Chips */}
+                <div className="flex flex-wrap justify-center gap-3">
+                    {filteredSkills.map((skill, idx) => (
                         <div
-                            key={key}
-                            className="bg-card p-6 rounded-lg shadow-xs card-hover "
+                            key={idx}
+                            className="bg-card px-4 py-2 bg-primary/10 shadow-xs text-s font-semibold card-hover transition-all duration-200"
                         >
-                            <div className="text-Center mb-2 text-lg font-semibold">
-                                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-                            </div>
-                            <div className="w-full h-2 bg-secondary/50 rounded-full overflow-hidden">
-                                <div className="bg-primary h-1 rounded-full origin-left animate-[grow_1.5s_ease-out"/>
-                            </div>
+                            {skill.name}
                         </div>
                     ))}
                 </div>
