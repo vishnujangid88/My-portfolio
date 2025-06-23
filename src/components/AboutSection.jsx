@@ -19,7 +19,7 @@ export const AboutSection = () => {
                 <div>
                   <h4 className="font-semibold text-lg">College</h4>
                   <p className="text-muted-foreground">
-                    B.Tech in Mechanical Engineering, Government Engineering College Bikaner (GECB), Rajasthan <br />
+                    B.E. in Artificial Intelligence & Data Science Engineering, MBM University, Jodhpur, Rajasthan <br />
                     Batch: 2022 - 2026
                   </p>
                 </div>
@@ -34,8 +34,9 @@ export const AboutSection = () => {
                 <div>
                   <h4 className="font-semibold text-lg">School</h4>
                   <p className="text-muted-foreground">
-                    Completed Senior Secondary from Maheshwari Public School, Jaipur <br />
-                    Year: 2021
+                    Completed Senior Secondary from LBS Science Classes, Kuchaman City, Rajasthan <br />
+                    Year: 2021   
+                    Result: 96.2%
                   </p>
                 </div>
               </div>
