@@ -3,7 +3,6 @@ import { Briefcase, Code, User } from "lucide-react";
 export const ExperienceSection = () => {
   return (
     <section id="experience" className="py-24 px-4 relative">
-      {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           Industry <span className="text-primary"> Experience</span>
@@ -16,23 +15,23 @@ export const ExperienceSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              During my internship, I developed a Face Recognition-Based Attendance System using Python, OpenCV, and Firebase. I designed and implemented real-time face detection and recognition pipelines, integrated cloud-based data storage, and optimized the system for high accuracy and efficiency. This experience strengthened my skills in computer vision, machine learning, and cloud technologies, and gave me hands-on exposure to building scalable, real-world AI solutions.
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+              Key achievements include automating attendance marking, achieving ~95% recognition accuracy in optimal conditions, and ensuring real-time data synchronization with Firebase. I also gained valuable experience in debugging, performance optimization, and collaborative software development.
             </p>
 
-            <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                    <a href="url not found" className="cosmic-button" target="_blank" rel="noopener noreferrer">
-                        View Project
-                    </a>
-                </div>
+            <div className="pt-4">
+              <a
+                href="https://github.com/vishnujangid88/Face-Recognition-Attendance"
+                className="cosmic-button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 gap-6">
@@ -42,10 +41,9 @@ export const ExperienceSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">Computer Vision & AI</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Built real-time face detection and recognition pipelines using OpenCV and deep learning models.
                   </p>
                 </div>
               </div>
@@ -56,10 +54,9 @@ export const ExperienceSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">Cloud Integration</h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
+                    Integrated Firebase Realtime Database and Cloud Storage for instant, scalable attendance management.
                   </p>
                 </div>
               </div>
@@ -69,12 +66,10 @@ export const ExperienceSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
-
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">Real-World Impact</h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                    Delivered a robust, automated attendance system, reducing manual effort and improving accuracy for organizations.
                   </p>
                 </div>
               </div>
