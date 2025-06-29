@@ -13,7 +13,7 @@ const projects = [
     id: 2,
     title: "Auto-Forest",
     description:
-      "built a preprocessed grayscale leaf image dataset and trained a convolutional autoencoder for image reconstruction, enabling plant identification research.",
+      "Built a preprocessed grayscale leaf image dataset and trained a convolutional autoencoder for image reconstruction, enabling plant identification research.",
     image: "/projects/project-2.jpg",
     tags: ["Python", "TensorFlow", "Deep Learning", "Autoencoder", "Computer Vision", "Image Processing"],
     githubUrl: "https://github.com/vishnujangid88/Auto-Forest",
