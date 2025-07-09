@@ -27,22 +27,6 @@ This is a modern, responsive personal portfolio built using **React.js** and **T
 
 ---
 
-## 📁 Folder Structure
-
-My-portfolio/
-├── public/
-├── src/
-│   ├── assets/          # Images, icons
-│   ├── components/      # Reusable components like Navbar, Footer
-│   ├── pages/           # About, Projects, Contact
-│   ├── App.js
-│   └── index.js
-├── index.html
-├── vite.config.js
-└── package.json
-
-
-
 
 ---
 
