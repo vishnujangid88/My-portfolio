@@ -28,8 +28,6 @@ This is a modern, responsive personal portfolio built using **React.js** and **T
 ---
 
 
----
-
 ## 🚀 Getting Started
 
 1. Clone the repo  
